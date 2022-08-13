@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  frontend:
+    build: ./itil_app_fe
+    ports:
+      - 8080:3000
+  backend:
+    build: ./itil_app_be
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - 8000:8000
